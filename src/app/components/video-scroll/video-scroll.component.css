@@ -1,0 +1,60 @@
+.video-scroll-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Changed to bg-light, matches Courses */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    h3 {
+      margin-bottom: 10px;
+      color: #6b7280; /* Muted purple, replaces #333 */
+      font-size: 18px;
+    }
+  
+    .video-list {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #6b7280 #f3f4f6; /* Muted purple thumb, neutral gray track */
+  
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: #6b7280; /* Muted purple, replaces #aaa */
+        border-radius: 10px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: #f3f4f6; /* Neutral gray, replaces #f9f9f9 */
+      }
+    }
+  
+    .video-item {
+      flex: 0 0 auto;
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #6b7280; /* Muted purple, replaces #555 */
+        margin: 0;
+      }
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+}

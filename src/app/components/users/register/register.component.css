@@ -1,0 +1,31 @@
+.container {
+  max-width: 600px;
+}
+.form-label {
+  font-weight: bold;
+}
+.text-danger {
+  font-size: 0.875em;
+}
+
+/* register.component.css */
+.btn-primary {
+  background: linear-gradient(135deg, #2a2a72, #009ffd); /* Match card header gradient */
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3a3a82, #00bffd); /* Slightly lighter on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.btn-primary:disabled {
+  background: linear-gradient(135deg, #4a4a92, #66c8ff); /* Lighter gradient for disabled */
+  opacity: 0.6; /* Faded appearance */
+  cursor: not-allowed; /* Indicate non-clickable */
+  transform: none; /* Remove hover effect */
+}

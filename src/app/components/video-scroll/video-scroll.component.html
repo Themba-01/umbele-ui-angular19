@@ -1,0 +1,17 @@
+<div class="video-scroll-container bg-light">
+    <h3 class="text-secondary">Reference Videos</h3>
+    <div class="video-list">
+      <div
+        class="video-item"
+        *ngFor="let video of referenceVideos"
+        (click)="openVideo(video.videoUrl)"
+      >
+        <img
+          [src]="getThumbnail(video.videoUrl)"
+          [alt]="video.title"
+          class="video-thumbnail border-secondary"
+        />
+        <p class="text-muted">{{ video.title }}</p>
+      </div>
+    </div>
+</div>

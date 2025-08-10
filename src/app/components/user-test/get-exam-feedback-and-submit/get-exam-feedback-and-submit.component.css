@@ -1,0 +1,65 @@
+.feedback-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f8f9fa; /* Added bg-light, matches Courses */
+}
+
+.feedback-textarea {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #6b7280; /* Muted purple, matches text-muted */
+    border-color: #6c757d; /* Matches border-secondary */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #092a6c; /* Muted purple, replaces #6c757d */
+    border-color: #6b7280;
+}
+
+.btn-secondary:hover {
+    background-color: #0e5ecf; /* Darker purple for hover */
+    border-color: #4b5563;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button for navigation */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

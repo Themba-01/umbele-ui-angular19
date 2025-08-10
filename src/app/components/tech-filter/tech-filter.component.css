@@ -1,0 +1,74 @@
+/* Container for the scrolling content */
+.tech-scroll-container {
+  overflow: hidden; /* Hide overflow for conveyor belt effect */
+  width: 100%;
+  padding: 1.5rem 0; /* Bootstrap p-3 equivalent */
+  background-color: #f8f9fa; /* Match bg-light from courses.component */
+}
+
+/* Content wrapper for tech cards */
+.tech-scroll-content {
+  display: flex;
+  gap: 1rem; /* Match your gap: 16px (Bootstrap gap-3) */
+  animation: conveyorBelt 20s linear infinite; /* Continuous left-to-right scroll */
+}
+
+/* Individual tech card */
+.tech-card {
+  flex: 0 0 auto; /* Prevent shrinking/stretching */
+  width: 220px; /* Fixed width, resolving min-width: 320px/max-width: 220px conflict */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Match your transition */
+}
+
+/* Hover effect */
+.tech-card:hover {
+  transform: translateY(-4px); /* Match your hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Match your hover shadow */
+}
+
+/* Style for SVG images */
+.tech-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Match your style */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match your style */
+}
+
+/* Style for tech name */
+.tech-card p {
+  margin-top: 0.5rem; /* Match your margin-top: 8px (Bootstrap mt-2) */
+  font-size: 14px; /* Match your style */
+  font-weight: bold; /* Match your style */
+  color: #333; /* Match your style */
+}
+
+/* Pause animation on hover for usability */
+.tech-scroll-container:hover .tech-scroll-content {
+  animation-play-state: paused;
+}
+
+/* Keyframes for conveyor belt animation */
+@keyframes conveyorBelt {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move half the content width for seamless loop */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-card {
+    width: 180px; /* Smaller cards on mobile */
+  }
+  .tech-card img {
+    width: 100%;
+    height: auto;
+  }
+  .tech-card p {
+    font-size: 12px; /* Slightly smaller for mobile */
+  }
+}

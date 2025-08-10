@@ -1,0 +1,76 @@
+.container {
+    max-width: 900px;
+    background-color: #f8f9fa; /* Added bg-light, matches Courses */
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.table {
+    font-size: 0.9rem;
+}
+
+.table th, 
+.table td {
+    vertical-align: middle;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card .text-secondary {
+    font-weight: bold;
+    color: #6b7280; /* Muted purple, replaces #198754 for success */
+}
+
+.card .text-danger {
+    font-weight: bold;
+    color: #ef4444; /* Home page red, replaces #dc3545 */
+}
+
+.card.border-secondary {
+    border: 2px solid #6b7280; /* Muted purple, replaces #198754 */
+}
+
+.card.border-danger {
+    border: 2px solid #ef4444; /* Home page red, replaces #dc3545 */
+}
+
+.card .badge.bg-secondary {
+    background-color: #6b7280; /* Muted purple, replaces #198754 */
+}
+
+.card .badge.bg-danger {
+    background-color: #ef4444; /* Home page red, replaces #dc3545 */
+}
+
+.text-muted {
+    font-style: italic;
+}
+
+/* Custom classes for getStatusClass and getDifficultyBadge */
+.status-in-progress, /* Assuming status classes from User Exams */
+.status-completed,
+.badge-easy, /* Assuming difficulty badges */
+.badge-medium,
+.badge-hard {
+    background-color: #6b7280; /* Muted purple for non-error states */
+    color: white;
+}
+
+.status-failed, /* Assuming possible failed status */
+.badge-error { /* Assuming possible error badge */
+    background-color: #ef4444; /* Home page red for error states */
+    color: white;
+}

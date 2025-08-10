@@ -1,0 +1,55 @@
+<div class="container mt-5 bg-light">
+  <h1 class="text-center mb-4 display-4 text-secondary">Click On The Slide Or Search </h1>
+  <p class="text-center text-muted mb-4">
+    Discover our comprehensive and engaging courses designed to boost your skills.
+  </p>
+  <div class="d-flex justify-content-center align-items-center mb-3" *ngIf="searchQuery">
+      <span class="alert alert-warning d-inline-flex align-items-center py-1 px-3 fs-5">
+        Searching for <span class="badge bg-warning text-dark ms-1">"{{ searchQuery }}"</span>
+      </span>
+    </div>
+
+
+  <!-- Technology Filter -->
+  <app-tech-filter [techList]="techData" (filterCourses)="onTechSelected($event)"></app-tech-filter>
+
+  <!-- Test Availability Toggle -->
+  <div class="d-flex justify-content-center align-items-center mt-3 mb-4">
+    <label class="form-check-label me-2 text-dark" for="toggleTests">Show Available Tests</label>
+    <input type="checkbox" class="form-check-input border-secondary" id="toggleTests" [(ngModel)]="onlyAvailableTest"
+      (change)="applyFilters()" />
+  </div>
+
+  <!-- Courses List -->
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div *ngFor="let course of filteredCourses" class="col-md-6 col-lg-4 mb-4">
+        <div class="card course-card bg-white">
+          <div class="card-header bg-secondary">
+            <h5 class="card-title text-white">{{ course.title }}</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text text-muted">{{ course.description }}</p>
+            <br>
+            <p class="text-muted">There are {{course.questionCount}} questions to evaluate your knowledge.</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-secondary" [disabled]="!userId || !course.questionCount"
+              (click)="startTest(course.courseId)">
+              Start a Test
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Courses Message -->
+      <div *ngIf="filteredCourses.length === 0" class="text-center col-md-8 col-lg-8 mb-8">
+        <h2 class="text-secondary">
+          No courses currently available
+          <span *ngIf="searchQuery">for "{{ searchQuery }}"</span>
+          <span *ngIf="technologySelected"> in {{ technologySelected }} Technology</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>

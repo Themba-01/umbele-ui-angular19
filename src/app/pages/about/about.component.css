@@ -1,0 +1,45 @@
+.about-us-container {
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.about-title {
+    font-family: 'Aptos', sans-serif; /* Aptos font for "About Us" */
+    font-size: 30px; /* 20px as requested */
+    font-weight: bold; /* Preserved for consistency with other headings */
+    text-align: center; /* Center the heading */
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mission-section, .vision-section, .history-section {
+    margin-top: 40px;
+}
+
+.mission-section h3, .vision-section h3, .history-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #14b8a6; /* Changed to teal from home page */
+}
+
+.mission-section p, .vision-section p, .history-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6b7280; /* Changed to muted purple from home page (text-muted) */
+}
+
+.mission-img, .vision-img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mission-img, .vision-img {
+        margin-bottom: 20px;
+    }
+}

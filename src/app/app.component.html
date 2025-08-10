@@ -1,0 +1,12 @@
+<div class="root-wrapper">
+  <main class="main-content">
+    <app-header></app-header>
+    @if (!isIframe) {
+      <div class="content-container">
+        <router-outlet #outlet="outlet"></router-outlet>
+      </div>
+    }
+    <ngx-spinner></ngx-spinner>
+  </main>
+  <app-footer></app-footer>
+</div>

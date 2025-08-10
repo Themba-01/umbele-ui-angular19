@@ -1,0 +1,24 @@
+<div *ngIf="showCertificate">
+    <div class="image-container">
+        <img src="../../../../assets/certifications/exam_certifications.png" alt="Exam Preparation"
+            class="img-fluid rounded shadow border-secondary" />
+    </div>
+    <div class="button-container">
+        <button class="btn btn-secondary" (click)="navigateToUserExams()">Results Board</button>
+        <!-- <button class="btn btn-secondary" (click)="goBackToExam()"> Results Board</button> -->
+    </div>
+</div>
+<div *ngIf="!showCertificate">
+    <app-exam-details [examId]="examId"></app-exam-details>
+</div>
+<div class="feedback-container bg-light">
+    <div *ngIf="!showCertificate">
+        <h2 class="text-secondary">We'd love to hear your feedback!</h2>
+        <textarea [(ngModel)]="feedbackText" placeholder="Enter your feedback here..." rows="5"
+            class="feedback-textarea text-muted border-secondary"></textarea>
+        <div class="button-group">
+            <button class="btn btn-secondary" (click)="finishExam()">Finish Exam</button>
+            
+        </div>
+    </div>
+</div>

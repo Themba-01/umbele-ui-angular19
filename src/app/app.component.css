@@ -1,0 +1,14 @@
+html, body {
+  height: 100%; /* Ensure full viewport height */
+  margin: 0; /* Remove default margins */
+}
+
+.root-wrapper {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1; /* Expand to push footer down */
+}

@@ -1,0 +1,72 @@
+/* C:\Users\USER\smartcertify-ui-angular19\src\app\components\users\update-profile\update-profile.component.css */
+
+/* Style the container to maximize background image space */
+.container.bg-light {
+  width: 100vw; /* Full viewport width */
+  max-width: 100%; /* Override max-width: 600px */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 5rem 15px; /* Maintain mt-5 and Bootstrap padding */
+  background-size: cover; /* Fill the container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent; /* Remove bg-light interference */
+  display: flex; /* Center the card */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  position: relative; /* For overlay */
+}
+
+/* Enhance card readability */
+.card.bg-white {
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Strong shadow */
+  border-radius: 8px; /* Softer corners */
+  max-width: 500px; /* Limit card width */
+  width: 90%; /* Responsive width */
+}
+
+/* Ensure form elements are clear */
+.form-control.border-secondary,
+.btn.btn-info {
+  background-color: #fff; /* Opaque inputs and buttons */
+  border-color: #6c757d; /* Maintain secondary border */
+}
+
+/* Existing styles from your provided CSS */
+.container {
+  max-width: 600px; /* Will be overridden by .container.bg-light */
+}
+
+.card-title {
+  text-align: center;
+}
+
+.img-thumbnail {
+  border-radius: 50%;
+}
+
+/* Styles for textarea (unchanged) */
+textarea {
+  resize: none; /* Disable resizing */
+}
+
+textarea.is-invalid {
+  border-color: red; /* Highlight invalid textarea */
+}
+
+/* Optional overlay for high-contrast SVGs */
+.container.bg-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Subtle overlay */
+  z-index: 1;
+}
+.card.bg-white {
+  position: relative;
+  z-index: 2; /* Card above overlay */
+}

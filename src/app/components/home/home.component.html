@@ -1,0 +1,145 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <div class="hero-section text-center text-white">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content bg-light bg-opacity-75 text-dark py-5 rounded-3">
+      <h1 class="display-3 fw-bold mb-3">Umbele: Your Matric Triumph</h1>
+      <p class="lead mb-4">Vibrant courses crafted for South African students to conquer matric and beyond.</p>
+      <button
+        class="btn btn-warning btn-lg"
+        [routerLink]="['/courses']"
+        (click)="navigateToCourses()"
+      >
+        Explore Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container py-5 bg-body-tertiary">
+    <h2 class="text-center mb-5 fw-bold">Why Umbele Stands Out</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 bg-light border-0 shadow-sm">
+          <i class="bi bi-question-circle-fill card-img-top text-primary" style="font-size: 4rem; padding: 1rem;"></i>
+          <div class="card-body">
+            <h3 class="card-title text-primary">Master with Quizzes</h3>
+            <p class="card-text">Challenge yourself with interactive quizzes for matric subjects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 bg-light border-0 shadow-sm">
+          <i class="bi bi-award-fill card-img-top text-warning" style="font-size: 4rem; padding: 1rem;"></i>
+          <div class="card-body">
+            <h3 class="card-title text-warning">Earn Certifications</h3>
+            <p class="card-text">Unlock recognized certificates to boost your future.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 bg-light border-0 shadow-sm">
+          <i class="bi bi-clock-fill card-img-top text-success" style="font-size: 4rem; padding: 1rem;"></i>
+          <div class="card-body">
+            <h3 class="card-title text-success">Learn Your Way</h3>
+            <p class="card-text">Study at your own pace with flexible access.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Courses Carousel Section -->
+  <div class="container-fluid py-5 bg-body-tertiary">
+    <h2 class="text-center mb-5 fw-bold">Discover Our Courses</h2>
+    <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card bg-light border-0 shadow-sm mx-auto" style="max-width: 300px;">
+            <i class="bi bi-flower1 card-img-top text-primary" style="font-size: 4rem; padding: 1rem;"></i>
+            <div class="card-body">
+              <h4 class="card-title text-primary">Life Sciences</h4>
+              <p class="card-text">Explore biology with engaging lessons and quizzes.</p>
+              <button
+                class="btn btn-outline-warning btn-sm"
+                [routerLink]="['/courses']"
+                (click)="navigateToCourses()"
+              >
+                Start Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card bg-light border-0 shadow-sm mx-auto" style="max-width: 300px;">
+            <i class="bi bi-lightbulb-fill card-img-top text-primary" style="font-size: 4rem; padding: 1rem;"></i>
+            <div class="card-body">
+              <h4 class="card-title text-primary">Physical Sciences</h4>
+              <p class="card-text">Master physics and chemistry with hands-on content.</p>
+              <button
+                class="btn btn-outline-warning btn-sm"
+                [routerLink]="['/courses']"
+                (click)="navigateToCourses()"
+              >
+                Start Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card bg-light border-0 shadow-sm mx-auto" style="max-width: 300px;">
+            <i class="bi bi-calculator-fill card-img-top text-primary" style="font-size: 4rem; padding: 1rem;"></i>
+            <div class="card-body">
+              <h4 class="card-title text-primary">Mathematics</h4>
+              <p class="card-text">Build problem-solving skills with guided exercises.</p>
+              <button
+                class="btn btn-outline-warning btn-sm"
+                [routerLink]="['/courses']"
+                (click)="navigateToCourses()"
+              >
+                Start Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card bg-light border-0 shadow-sm mx-auto" style="max-width: 300px;">
+            <i class="bi bi-cash-coin card-img-top text-primary" style="font-size: 4rem; padding: 1rem;"></i>
+            <div class="card-body">
+              <h4 class="card-title text-primary">Accounting</h4>
+              <p class="card-text">Learn financial skills with practical lessons.</p>
+              <button
+                class="btn btn-outline-warning btn-sm"
+                [routerLink]="['/courses']"
+                (click)="navigateToCourses()"
+              >
+                Start Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Motivational CTA Section -->
+  <div class="container-fluid py-5 bg-light text-center">
+    <h2 class="fw-bold mb-3">Ready to Excel?</h2>
+    <p class="lead mb-4">Join Umbele and take the first step toward matric success with South Africa’s best online courses.</p>
+    <button
+      class="btn btn-primary btn-lg"
+      [routerLink]="['/courses']"
+      (click)="navigateToCourses()"
+    >
+      Get Started Now
+    </button>
+  </div>
+</div>

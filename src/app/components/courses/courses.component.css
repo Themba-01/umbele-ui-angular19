@@ -1,0 +1,57 @@
+.container {
+    /* max-width not specified in original, preserving layout */
+}
+
+.course-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    background-color: #6b7280; /* Muted purple from home page, replaces red */
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #6b7280; /* Kept muted purple from home page (text-muted) */
+}
+
+.btn-secondary {
+    background-color: #08193c; /* Muted purple from home page */
+    border-color: #6b7280;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563; /* Darker purple for hover */
+    border-color: #4b5563;
+    transform: scale(1.05);
+}
+
+.form-check-input:focus {
+    border-color: #6b7280; /* Muted purple from home page, replaces red */
+    box-shadow: 0 0 0 0.2rem rgba(107, 114, 128, 0.25); /* Purple with opacity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-card {
+        margin-bottom: 1rem;
+    }
+}

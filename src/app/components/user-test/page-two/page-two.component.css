@@ -1,0 +1,61 @@
+.container {
+    background-color: #f8f9fa; /* Kept light background (bg-light) */
+    border: 1px solid #dee2e6; /* Kept neutral border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2.text-secondary {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #6b7280; /* Muted purple from home page, replaces blue */
+}
+
+ul.list-group {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.list-group-item {
+    border: none;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+ul.list-group-item strong {
+    font-weight: 600;
+    color: #6b7280; /* Muted purple from home page, matches text-muted */
+}
+
+.description-item {
+    text-align: justify; /* Justify the Description list item */
+}
+
+.image-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+.btn-secondary {
+    background-color: #073592; /* Muted purple from home page */
+    border-color: #6b7280;
+}
+
+.btn-secondary:hover {
+    background-color: #0a5fd6; /* Darker purple for hover */
+    border-color: #4b5563;
+}

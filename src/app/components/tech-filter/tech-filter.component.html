@@ -1,0 +1,8 @@
+<div class="tech-scroll-container">
+  <div class="tech-scroll-content">
+    <div class="tech-card" *ngFor="let tech of duplicatedTechList" (click)="selectTechnology(tech.name)">
+      <img [src]="tech.image" [alt]="tech.name" />
+      <p>{{ tech.name }}</p>
+    </div>
+  </div>
+</div>
